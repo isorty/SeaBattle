@@ -1,0 +1,290 @@
+﻿<Page x:Class="Battleships.Pages.SetUp"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local ="clr-namespace:Battleships.Core"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="705"
+      Title="SetUp">
+
+    <Canvas x:Name="MyCanvas">
+        <!-- Page header -->
+        <Label 
+            Foreground="Gray"
+            FontSize="35"
+            FontFamily="{DynamicResource Mf Sippin On Sunshine}"
+            HorizontalAlignment="Center"
+            Content="Расстановка"
+            Canvas.Left="226"
+            Width="309" 
+            Height="63" Canvas.Top="-7"/>
+
+        <Image
+            Height="37"
+            Canvas.Left="188"
+            Width="42" 
+            Source="/Images/PageHeaders/Planning.png" Canvas.Top="6"/>
+
+
+        <local:MyField
+            x:Name="myField"
+            AllowDrop="True"
+            Margin="25,65"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Width="285"
+            Height="285">
+
+            <local:MyField.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </local:MyField.RowDefinitions>
+
+            <local:MyField.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </local:MyField.ColumnDefinitions>
+
+        </local:MyField>
+
+
+        <StackPanel
+            Orientation="Horizontal"
+            
+            Canvas.Left="220" 
+            Canvas.Top="364">
+            
+            <!-- Delete Button -->
+            <Button
+            x:Name="Delete"
+            Style="{DynamicResource StandartButtonStyle}"
+            Click="Delete_Click"
+            HorizontalAlignment="Left"
+            Width="76"
+            Height="76">
+                <Image Source="/Images/Bin.png" Height="50" Width="52"/>
+            </Button>
+
+            <!-- Random button -->
+            <Button 
+            x:Name="Random"
+            Style="{DynamicResource StandartButtonStyle}"
+            Click="Random_Click"
+            HorizontalAlignment="Left"
+            Margin="1"
+            Width="76"
+            Height="76">
+                <Image Source="/Images/AI.png" Height="76" Width="56"/>
+            </Button>
+
+
+            <!-- Reset button -->
+            <Button
+            x:Name="Reset"
+            Style="{DynamicResource StandartButtonStyle}"
+            Click="Reset_Click"
+            HorizontalAlignment="Left"
+            Width="76"
+            Height="76">
+                <Image Source="/Images/Reset.png" Height="60" Width="52"/>
+            </Button>
+
+        </StackPanel>
+
+
+        <local:ShipVisual
+            Width="104" 
+            Style="{StaticResource StandartButtonStyle}"
+            Height="27" 
+            Canvas.Left="413"
+            Orientation="Horizontal"
+            Length="4"
+            Canvas.Top="117">
+            <Image Source="/Images/Ships/ShipFour.png"></Image>
+        </local:ShipVisual>
+
+        <local:ShipVisual
+            Width="78" 
+            Height="27"
+            Style="{StaticResource StandartButtonStyle}"
+            Length="3"
+            Orientation="Horizontal"
+            Canvas.Left="413"
+            Canvas.Top="168">
+            <Image Source="/Images/Ships/ShipThree.png"></Image>
+        </local:ShipVisual>
+
+        <local:ShipVisual
+            Width="52" 
+            Height="26"
+            Length="2"
+            Orientation="Horizontal"
+            Canvas.Left="413"
+            Canvas.Top="220"
+            Style="{DynamicResource StandartButtonStyle}">
+            <Image Source="/Images/Ships/ShipTwo.png"></Image>
+        </local:ShipVisual>
+
+        <local:ShipVisual
+            Style="{DynamicResource StandartButtonStyle}"  
+            Width="27"
+            Height="27"
+            Length="1"
+            Orientation="Horizontal"
+            Canvas.Left="413"
+            Canvas.Top="298">
+            <Image Source="/Images/Cells/ShipCell.png"></Image>
+        </local:ShipVisual>
+
+        <local:ShipVisual
+            Width="27" 
+                 Style="{DynamicResource StandartButtonStyle}"  
+            Height="104" 
+            Canvas.Left="594"
+            Orientation="Vertical"
+            Length="4"
+            Canvas.Top="220">
+            <Image Source="/Images/Ships/ShipFourV.png"></Image>
+        </local:ShipVisual>
+
+        <local:ShipVisual
+            Width="27" 
+                 Style="{DynamicResource StandartButtonStyle}"  
+            Height="78" 
+            Canvas.Left="542"
+            Orientation="Vertical"
+            Length="3"
+            Canvas.Top="246">
+            <Image Source="/Images/Ships/ShipThreeV.png"></Image>
+        </local:ShipVisual>
+
+        <local:ShipVisual
+            Width="27" 
+                 Style="{DynamicResource StandartButtonStyle}"  
+            Height="52" 
+            Canvas.Left="491"
+            Orientation="Vertical"
+            Length="2"
+            Canvas.Top="272">
+            <Image Source="/Images/Ships/ShipTwoV.png"></Image>
+        </local:ShipVisual>
+
+
+        <Image
+            Source="/Images/DragAndDrop.png"
+            Height="60" 
+            Width="97" Canvas.Left="315" Canvas.Top="177"/>
+
+        
+        <!-- Cancel button -->
+        <Button 
+            x:Name="CancelButton"
+            Style="{DynamicResource StandartButtonStyle}"   
+            Click="CancelButton_Click"
+            FontSize="27"
+            Foreground="Red"
+            Content="Назад"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Width="128" Height="44" Canvas.Left="26" Canvas.Top="392"/>
+
+        <!-- Continue button -->
+        <Button
+            x:Name="ContinueButton"
+      
+            FontSize="27"
+            Content="Вперёд"
+            Click="ContinueButton_Click"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            
+            Width="149" 
+            Height="44"
+            Canvas.Left="506"
+            Canvas.Top="392">
+            <Button.Resources>
+                <Style TargetType="{x:Type Button}"
+                       BasedOn="{StaticResource StandartButtonStyle}">
+                    <Setter Property="IsEnabled" Value="False"/>
+                    <Style.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=myField, Path=UnsettedShipsByLength[0].Value}" Value="0"/>
+                                <Condition Binding="{Binding ElementName=myField, Path=UnsettedShipsByLength[1].Value}" Value="0"/>
+                                <Condition Binding="{Binding ElementName=myField, Path=UnsettedShipsByLength[2].Value}" Value="0"/>
+                                <Condition Binding="{Binding ElementName=myField, Path=UnsettedShipsByLength[3].Value}" Value="0"/>
+                            </MultiDataTrigger.Conditions>
+                            <MultiDataTrigger.Setters>
+                                <Setter Property="IsEnabled" Value="True"/>
+                            </MultiDataTrigger.Setters>
+                        </MultiDataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Label
+            Content="Корабли:" 
+            Style="{DynamicResource StandartLabelStyle}"
+            FontSize="21"
+            Canvas.Left="466"
+            Canvas.Top="57"/>
+
+        <Label
+            x:Name="One"
+            Style="{DynamicResource StandartLabelStyle}"
+            FontSize="19"
+            ContentStringFormat="x{0}"
+            Content="{Binding ElementName=myField, Path=UnsettedShipsByLength[0].Value}"
+            Canvas.Left="434"
+            Canvas.Top="266" 
+            Height="40" Width="36"/>
+
+        <Label
+            x:Name="Two"
+            Style="{DynamicResource StandartLabelStyle}"
+            FontSize="19"
+            ContentStringFormat="x{0}"
+            Content="{Binding ElementName=myField, Path=UnsettedShipsByLength[1].Value}"
+            Canvas.Left="485"
+            Canvas.Top="214" 
+            Height="40" Width="36"/>
+        <Label
+            x:Name="Three"
+            Style="{DynamicResource StandartLabelStyle}"
+            FontSize="19"
+            ContentStringFormat="x{0}"
+            Content="{Binding ElementName=myField, Path=UnsettedShipsByLength[2].Value}"
+            Canvas.Left="538"
+            Canvas.Top="163" 
+            Height="40" Width="36"/>
+        <Label
+            x:Name="Four"
+            Style="{DynamicResource StandartLabelStyle}"
+            FontSize="19"
+            Content="{Binding ElementName=myField, Path=UnsettedShipsByLength[3].Value}"
+            ContentStringFormat="x{0}"
+            Canvas.Left="590"
+            Canvas.Top="112" 
+            Height="40" Width="36"/>
+    </Canvas>
+</Page>

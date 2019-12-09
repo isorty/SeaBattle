@@ -1,0 +1,62 @@
+﻿<Window x:Class="TestPages.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestPages"
+        xmlns:my="clr-namespace:TestPages.Properties"
+        mc:Ignorable="d"
+        Title="Battleships"
+        Height="500"
+        Width="700"
+        Icon="/Images/Icon.ico"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        MouseDown="Window_MouseDown">
+
+    <Window.Background>
+        <ImageBrush TileMode="FlipXY" Stretch="UniformToFill">
+            <ImageBrush.ImageSource>
+                <ImageSource>/Images/Back.png</ImageSource>
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+
+    </Window.Background>
+
+    <Window.Content>
+        <Canvas>
+            <Frame
+                x:Name="Main"
+                HorizontalAlignment="Left"
+                Width="690"
+                Height="500"
+                NavigationUIVisibility="Hidden"
+                Margin="0,10,0,2">
+            </Frame>
+            
+            <Button 
+                Height="30" 
+                Width="30" 
+                Canvas.Left="645"
+                Canvas.Top="15"
+                Click="ExitButton_Click"
+                Style="{DynamicResource StandartButtonStyle}">
+                <Image Source="/Images/CrossCell.png"/>
+            </Button>
+            
+            <Button 
+                Height="30" 
+                Width="30" 
+                Canvas.Left="619"
+                Canvas.Top="15"
+                Click="Minimaze_Click"
+                Style="{DynamicResource StandartButtonStyle}">
+                <Image Source="/Images/Minimize.png" Width="25"/>
+            </Button>
+        </Canvas>
+    </Window.Content>
+
+
+
+
+</Window>

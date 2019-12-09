@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Battleships.Core.Cell" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAAAAAAQABAACABAAAAAAAIAAAABABCABADI=</HashCode>
+      <FileName>Core\Cell\Cell.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Battleships.Core.ConnectionManager" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAJAEAAAAAAAAAAgACACEAAAoCBAAACAAhQAECAADgQ=</HashCode>
+      <FileName>Core\ConnectionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battleships.Core.UpdateableType&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAIAAAAAAAgAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Core\Field\Field.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Battleships.Core.Field" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMgAACAAAAAAAACAAACAAABAAAAAAAAAAAKAAAAAA=</HashCode>
+      <FileName>Core\Field\Field.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Battleships.Core.MyField" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAARAAAAAAABCA0AAAAAAAABQAAACAAEAAAAAAAAAA=</HashCode>
+      <FileName>Core\Field\Field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battleships.Core.EnemyField" Collapsed="true">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQQAAA=</HashCode>
+      <FileName>Core\Field\Field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battleships.Core.Me" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battleships.Core.Game" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEIAAAAAAQAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Core\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battleships.Core.Opponent" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAgABAAAQAAAAAAAgAAAA=</HashCode>
+      <FileName>Core\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battleships.Core.NetOpponent" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAgABAAAQAAAAAAAgAAAA=</HashCode>
+      <FileName>Core\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battleships.Core.AIOppenent" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battleships.Core.Bot" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAgQACEAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battleships.Core.GameInfo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAkAAAABAAAJAAAABQAgCAQABAAAAAQAAgAAQA=</HashCode>
+      <FileName>Core\GameInfo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Battleships.Core.ShipModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQBAAAAAAAAEAABAAAAAAAIAAAAAACABAAA=</HashCode>
+      <FileName>Core\Ship\ShipModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Battleships.Core.ShipVisual" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQBAAgAAAAAEAABAEAAAAAIAAAAAACABAAA=</HashCode>
+      <FileName>Core\Ship\ShipVisual.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Battleships.Extensions.RtbExtensions" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Help classes\Extensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battleships.Extensions.MessageFormtatter" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAA=</HashCode>
+      <FileName>Help classes\MessageFormtatter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battleships.Extensions.PageHelper" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Help classes\PageHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battleships.Pages.App" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battleships.Pages.Fight" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Fight.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Battleships.Pages.FightResult" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\FightResult.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Battleships.Pages.LoginPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAQAAAQAAQCAAAIAQAAACA=</HashCode>
+      <FileName>Pages\LoginPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Battleships.Pages.MainMenu" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAQQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\MainMenu.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Battleships.Pages.SetUp" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAACAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Pages\SetUp.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TestPages.Properties.Resources" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestPages.Properties.Settings" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battleships.Windows.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAABBAAAAAA=</HashCode>
+      <FileName>Windows\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Battleships.Windows.Notification" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAABAAAQAAA=</HashCode>
+      <FileName>Windows\Notification.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Struct Name="Battleships.Core.AttackMessage" Collapsed="true">
+    <Position X="5.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAACAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Core\ConnectionManager.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Battleships.Core.ICell" Collapsed="true">
+    <Position X="5.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAABCABAAA=</HashCode>
+      <FileName>Core\Cell\ICell.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Battleships.Core.IField" Collapsed="true">
+    <Position X="7" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Field\IField.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Battleships.Core.IShip" Collapsed="true">
+    <Position X="8.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQBAAAAAAAAEAABAAAAAAAIAAAAAACABAAA=</HashCode>
+      <FileName>Core\Ship\IShip.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Battleships.Core.MessageType" Collapsed="true">
+    <Position X="5.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAgAAggAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\ConnectionManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Battleships.Core.GameMessageType" Collapsed="true">
+    <Position X="7" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Core\ConnectionManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Battleships.Core.GameType" Collapsed="true">
+    <Position X="12.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Game.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Battleships.Core.GameState" Collapsed="true">
+    <Position X="10.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQIAAAAAAAAAAAEAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GameInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Battleships.Core.GameResult" Collapsed="true">
+    <Position X="8.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GameInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Battleships.Core.AttackResult" Collapsed="true">
+    <Position X="5.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAQAAAAAAAAAEIAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GameInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Battleships.Core.Orientation" Collapsed="true">
+    <Position X="7" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Ship\IShip.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Battleships.Extensions.PageType" Collapsed="true">
+    <Position X="8.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAgAAAAAAAAQAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Help classes\PageHelper.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

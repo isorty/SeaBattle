@@ -1,0 +1,217 @@
+<Page x:Class="Battleships.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Battleships.Core"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="705"
+      Title="LoginPage">
+
+    <Grid>
+        <!-- Server IP Address -->
+        <TextBox 
+            Style="{DynamicResource TextBoxWithBorderStyle}"
+            x:Name="ServerIpAdress"
+            FontSize="19"
+            Background="Transparent"
+            Height="33" 
+            Width="187" 
+            TextChanged="ServerIpAdress_TextChanged"
+            HorizontalContentAlignment="Center"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top"
+            Margin="178,62,0,0">
+        </TextBox>
+
+        <!-- Connect IP Address -->
+        <TextBox 
+            x:Name="ConnectIpAdress"
+            Style="{DynamicResource TextBoxWithBorderStyle}"
+            FontSize="19"
+            Height="33" 
+            Width="187" 
+            Text="127.0.0.1"
+            TextChanged="ConnectIpAdress_TextChanged"
+            HorizontalContentAlignment="Center"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top"
+            Margin="180,114,0,0"/>
+
+        <!-- Server Port -->
+        <TextBox 
+            x:Name="ServerPort"
+            Style="{DynamicResource TextBoxWithBorderStyle}"
+            FontSize="19"
+            Height="33" 
+            Width="82" 
+            HorizontalContentAlignment="Center"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top"
+            Text="8080"
+            Margin="464,62,0,0"/>
+
+        <!-- Connection Port -->
+        <TextBox 
+            x:Name="ConnectionPort"
+            Style="{DynamicResource TextBoxWithBorderStyle}"
+            FontSize="19"
+            Height="33"
+            Width="82" 
+            HorizontalContentAlignment="Center"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top"
+            Text="8080"
+            Margin="464,114,0,0" RenderTransformOrigin="0.5,0.5">
+        </TextBox>
+
+        <!-- Server Create Button-->
+        <Button 
+            x:Name="CreateServerButton"
+            Style="{DynamicResource StandartButtonStyle}"
+            FontSize="21"
+            Height="28"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin="0,64,10,0"
+            Click="ServerStartButton_Click"
+            Content="Create"
+            Width="82"/>
+
+        <!-- Connect to server Button-->
+        <Button
+            x:Name="ConnectButton"
+            Style="{DynamicResource StandartButtonStyle}"
+            Height="30"
+            FontSize="21"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Margin="0,115,10,0"
+            BorderThickness="0"
+            Click="ConnectButton_Click"
+            Content="Connect" 
+            Width="144"/>
+
+        <!-- ConnectionLog TextBox-->
+        <RichTextBox
+            x:Name="ConnectionLog"
+            IsReadOnly="True"
+            BorderThickness="5"
+            BorderBrush="CadetBlue"
+            
+            FontFamily="{DynamicResource Mf Sippin On Sunshine}"
+            FontSize="17"
+            
+            Background="Transparent"
+            Foreground="Green"
+            HorizontalAlignment="Left"
+            Height="187"
+            Margin="26,193,0,0"
+            VerticalAlignment="Top"
+            Width="650">
+            <RichTextBox.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </RichTextBox.Resources>
+        </RichTextBox>
+
+        <!-- Cancel Button -->
+        <Button 
+            x:Name="CancelButton"
+            Style="{DynamicResource StandartButtonStyle}"   
+            Click="CancelButton_Click"
+            FontSize="27"
+            Foreground="Red"
+            Content="Back"
+            HorizontalAlignment="Left"
+            Margin="26,392,0,0"
+            VerticalAlignment="Top" 
+            Width="128" Height="44"/>
+
+        <!-- Continue Button -->
+        <Button
+            x:Name="ContinueButton"
+            Style="{DynamicResource StandartButtonStyle}"
+            IsEnabled="False"    
+            FontSize="27"
+            Content="Continue"
+            Click="ContinueButton_Click"
+            HorizontalAlignment="Left"
+            Margin="506,392,0,0"
+            VerticalAlignment="Top"
+            Width="164" Height="44"/>
+
+        <!-- Server Label -->
+        <Label 
+            Style="{DynamicResource StandartLabelStyle}"
+            FontSize="23"
+            Content="Server IP: "
+            HorizontalAlignment="Left"
+            Margin="23,55,0,0"
+            VerticalAlignment="Top"
+            Height="39"
+            Width="160"/>
+
+        <!-- Port Label-->
+        <Label 
+            Style="{DynamicResource StandartLabelStyle}"
+            FontSize="23"
+            Content="Port: "
+            HorizontalAlignment="Left"
+            Margin="384,55,0,0"
+            VerticalAlignment="Top"
+            Height="39"
+            Width="84" RenderTransformOrigin="0.451,0.269"/>
+
+
+        <!--  -->
+        <Label 
+            Style="{DynamicResource StandartLabelStyle}"
+            FontSize="23"
+            Content="Connect IP: "
+            HorizontalAlignment="Left"
+            Margin="23,107,0,0"
+            VerticalAlignment="Top"
+            Height="39"
+            Width="176"/>
+        <Label 
+            Style="{DynamicResource StandartLabelStyle}"
+            FontSize="23"
+            Content="Port: "
+            HorizontalAlignment="Left"
+            Margin="384,107,0,0"
+            VerticalAlignment="Top"
+            Height="39"
+            Width="82"/>
+
+        <Label 
+            Style="{DynamicResource StandartLabelStyle}"
+            Content="Online game"
+            FontSize="35"
+            Foreground="Gray"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Width="249"
+            Height="58" 
+            Margin="246,-8,210,0"/>
+
+        <Image HorizontalAlignment="Left" Height="43" Margin="203,0,0,0" VerticalAlignment="Top" Width="43">
+            <Image.Source>
+                <BitmapImage UriSource="/Images/PageHeaders/Signal.png"/>
+            </Image.Source>
+        </Image>
+
+        <Label
+            Style="{DynamicResource StandartLabelStyle}"
+            FontSize="20"
+            
+            Content="System log:"
+            HorizontalAlignment="Left"
+            Margin="26,152,0,0"
+            VerticalAlignment="Top"
+            Width="157"
+            Height="41"/>
+
+    </Grid>
+</Page>
