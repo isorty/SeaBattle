@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using Battleships.Core;
+using Battleships.Model;
 using Battleships.Extensions;
 
 namespace Battleships.Pages
@@ -29,15 +29,15 @@ namespace Battleships.Pages
 
         private async void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            await Game.opponent.SendGameMessage(GameMessageType.End);
-            Game.ConnectionManager.CloseAllConnections();
+            await Battle.Enemy.SendGameMessage(GameMessageType.End);
+            Battle.ServerManager.CloseAllConnections();
             PageHelper.GoToPage(PageType.MainMenu);
         }
 
         private async void ContinueButton_Click(object sender, RoutedEventArgs e)
         {
-            Game.Info.IsIReady = true;
-            await Game.opponent.SendGameMessage(GameMessageType.Ready);
+            Battle.Info.IsIReady = true;
+            await Battle.Enemy.SendGameMessage(GameMessageType.Ready);
             PageHelper.GoToPage(PageType.Fight, myField);
         }
 

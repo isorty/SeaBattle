@@ -9,7 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using Battleships.Core;
+using Battleships.Model;
 using Battleships.Extensions;
 
 namespace Battleships.Pages
@@ -22,22 +22,22 @@ namespace Battleships.Pages
         public Fight()
         {
             InitializeComponent();
-            Game.ConnectionManager.ChatStream = ChatWindow;
+            Battle.ServerManager.ChatStream = ChatWindow;
         }
 
-        public Fight(MyField f): this()
+        public Fight(PlayerField f): this()
         {
             myField.CopyInfo(f);
 
-            Game.me.myField = myField;
-            Game.me.enemyField = EnemyField;
+            Battle.Player.PlayerField = myField;
+            Battle.Player.EnemyField = EnemyField;
         }
 
         private void SendButton_Click(object sender, RoutedEventArgs e)
         {
             if (TextToSend.Text.Length == 0) return;
 
-            Game.opponent.SendChatMessage(TextToSend.Text);
+            Battle.Enemy.SendChatMessage(TextToSend.Text);
 
             ChatWindow.AppendText("Me: " + TextToSend.Text, Brushes.Green);
             TextToSend.Clear();

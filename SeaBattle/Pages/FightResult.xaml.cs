@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using Battleships.Core;
+using Battleships.Model;
 using Battleships.Extensions;
 
 namespace Battleships.Pages
@@ -17,7 +17,7 @@ namespace Battleships.Pages
 
         private void MainMenu_Click(object sender, RoutedEventArgs e)
         {
-            Game.ConnectionManager.CloseAllConnections();
+            Battle.ServerManager.CloseAllConnections();
 
             PageHelper.GoToPage(PageType.MainMenu);
         }

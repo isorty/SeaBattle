@@ -116,11 +116,8 @@ D:\GitRepo\SeaBattle\bin\Debug\TestPages.exe.config
 D:\GitRepo\SeaBattle\obj\Debug\TestPages.exe
 D:\GitRepo\SeaBattle\obj\Debug\TestPages.pdb
 D:\GitRepo\BattleShip\SeaBattle\bin\Debug\TestPages.exe.config
-D:\GitRepo\BattleShip\SeaBattle\obj\Debug\TestPages.exe
-D:\GitRepo\BattleShip\SeaBattle\obj\Debug\TestPages.pdb
 D:\GitRepo\BattleShip\SeaBattle\bin\Debug\TestPages.exe
 D:\GitRepo\BattleShip\SeaBattle\bin\Debug\TestPages.pdb
-D:\GitRepo\BattleShip\SeaBattle\obj\Debug\Battleships.csprojResolveAssemblyReference.cache
 D:\GitRepo\BattleShip\SeaBattle\obj\Debug\Windows\Notification.g.cs
 D:\GitRepo\BattleShip\SeaBattle\obj\Debug\Pages\FightResult.g.cs
 D:\GitRepo\BattleShip\SeaBattle\obj\Debug\Pages\Fight.g.cs
@@ -129,7 +126,6 @@ D:\GitRepo\BattleShip\SeaBattle\obj\Debug\Pages\MainMenu.g.cs
 D:\GitRepo\BattleShip\SeaBattle\obj\Debug\Windows\MainWindow.g.cs
 D:\GitRepo\BattleShip\SeaBattle\obj\Debug\Pages\SetUp.g.cs
 D:\GitRepo\BattleShip\SeaBattle\obj\Debug\Pages\App.g.cs
-D:\GitRepo\BattleShip\SeaBattle\obj\Debug\TestPages_Content.g.cs
 D:\GitRepo\BattleShip\SeaBattle\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\GitRepo\BattleShip\SeaBattle\obj\Debug\TestPages_MarkupCompile.cache
 D:\GitRepo\BattleShip\SeaBattle\obj\Debug\TestPages_MarkupCompile.lref
@@ -144,3 +140,5 @@ D:\GitRepo\BattleShip\SeaBattle\obj\Debug\Pages\SetUp.baml
 D:\GitRepo\BattleShip\SeaBattle\obj\Debug\TestPages.g.resources
 D:\GitRepo\BattleShip\SeaBattle\obj\Debug\TestPages.Properties.Resources.resources
 D:\GitRepo\BattleShip\SeaBattle\obj\Debug\Battleships.csproj.GenerateResource.Cache
+D:\GitRepo\BattleShip\SeaBattle\obj\Debug\TestPages.exe
+D:\GitRepo\BattleShip\SeaBattle\obj\Debug\TestPages.pdb

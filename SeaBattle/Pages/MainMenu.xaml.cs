@@ -1,13 +1,10 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using Battleships.Core;
+using Battleships.Model;
 using Battleships.Extensions;
 
 namespace Battleships.Pages
 {
-    /// <summary>
-    /// Interaction logic for MainMenu.xaml
-    /// </summary>
     public partial class MainMenu : Page
     {
         public MainMenu()
@@ -17,20 +14,20 @@ namespace Battleships.Pages
 
         private void PlayVsHuman_Click(object sender, RoutedEventArgs e)
         {
-            Game game = new Game(GameType.VsHuman);
+            Battle battle = new Battle(BattleType.Online);
             PageHelper.GoToPage(PageType.Login);
         }
 
         private void PlayVsAI_Click(object sender, RoutedEventArgs e)
         {
-            Game game = new Game(GameType.VsAI);
+            Battle battle = new Battle(BattleType.Offline);
             PageHelper.GoToPage(PageType.SetUp);
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            if (Game.ConnectionManager != null)
-                Game.ConnectionManager.CloseAllConnections();
+            if (Battle.ServerManager != null)
+                Battle.ServerManager.CloseAllConnections();
             Application.Current.Shutdown();
         }
     }

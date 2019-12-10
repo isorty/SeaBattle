@@ -70,26 +70,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Core\Cell\Cell.cs" />
-    <Compile Include="Core\ConnectionManager.cs" />
+    <Compile Include="Model\Enemy\OfflineEnemy.cs" />
+    <Compile Include="Model\Enemy\Bot.cs" />
+    <Compile Include="Model\Cell\Cell.cs" />
+    <Compile Include="Model\Field\EnemyField.cs" />
+    <Compile Include="Model\Field\PlayerField.cs" />
+    <Compile Include="Model\ServerManager.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\Enemy\OnlineEnemy.cs" />
+    <Compile Include="Model\Enemy\Enemy.cs" />
     <Compile Include="Help classes\Extensions.cs" />
     <Compile Include="Help classes\MessageFormtatter.cs" />
-    <Compile Include="Core\Cell\ICell.cs" />
-    <Compile Include="Core\Field\IField.cs" />
-    <Compile Include="Core\Ship\IShip.cs" />
-    <Compile Include="Core\Ship\ShipModel.cs" />
+    <Compile Include="Model\Cell\ICell.cs" />
+    <Compile Include="Model\Field\IField.cs" />
+    <Compile Include="Model\Ship\IShip.cs" />
+    <Compile Include="Model\Ship\ShipModel.cs" />
     <Compile Include="Windows\Notification.xaml.cs">
       <DependentUpon>Notification.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\FightResult.xaml.cs">
       <DependentUpon>FightResult.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Core\Field\Field.cs" />
-    <Compile Include="Core\Game.cs" />
+    <Compile Include="Model\Field\Field.cs" />
+    <Compile Include="Model\Battle.cs" />
     <Compile Include="Pages\Fight.xaml.cs">
       <DependentUpon>Fight.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Core\GameInfo.cs" />
+    <Compile Include="Model\GameInfo.cs" />
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -97,7 +104,7 @@
     <Compile Include="Pages\SetUp.xaml.cs">
       <DependentUpon>SetUp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Core\Ship\ShipVisual.cs" />
+    <Compile Include="Model\Ship\ShipVisual.cs" />
     <Page Include="Windows\Notification.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -159,7 +166,6 @@
     <Resource Include="Fonts\Mf Sippin On Sunshine.ttf" />
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -267,9 +273,6 @@
     <Resource Include="Images\Ships\ShipFourV.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ReleaseNotes.css" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.6.2 %28x86 and x64%29</ProductName>
@@ -280,6 +283,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battleground.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

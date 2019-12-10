@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Battleships.Core"
+      xmlns:local="clr-namespace:Battleships.Model"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="703"
       Title="Fight"
@@ -12,7 +12,7 @@
 
 
     <Grid>
-        <local:MyField
+        <local:PlayerField
             x:Name="myField"
             Margin="25,65,0,0"
             HorizontalAlignment="Left"
@@ -20,7 +20,7 @@
             Width="285"
             Height="285">
 
-            <local:MyField.RowDefinitions>
+            <local:PlayerField.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -32,9 +32,9 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
-            </local:MyField.RowDefinitions>
+            </local:PlayerField.RowDefinitions>
 
-            <local:MyField.ColumnDefinitions>
+            <local:PlayerField.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -46,9 +46,9 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
-            </local:MyField.ColumnDefinitions>
+            </local:PlayerField.ColumnDefinitions>
 
-        </local:MyField>
+        </local:PlayerField>
 
         <local:EnemyField 
             x:Name="EnemyField"
@@ -123,15 +123,15 @@
                 <Label.Resources>
                     <Style TargetType="{x:Type Label}" BasedOn="{StaticResource StandartLabelStyle}">
                         <Style.Triggers>
-                            <DataTrigger Binding="{Binding Source={x:Static local:Game.Info}, Path=IsMyTurn}" Value="True">
+                            <DataTrigger Binding="{Binding Source={x:Static local:Battle.Info}, Path=IsMyTurn}" Value="True">
                                 <Setter Property="Content" Value="Attack!"></Setter>
                                 <Setter Property="Foreground" Value="Green"></Setter>
                             </DataTrigger>
-                            <DataTrigger Binding="{Binding Source={x:Static local:Game.Info}, Path=IsMyTurn}" Value="False">
+                            <DataTrigger Binding="{Binding Source={x:Static local:Battle.Info}, Path=IsMyTurn}" Value="False">
                                 <Setter Property="Content" Value="Defend!"></Setter>
                                 <Setter Property="Foreground" Value="Red"></Setter>
                             </DataTrigger>
-                            <DataTrigger Binding="{Binding Source={x:Static local:Game.Info}, Path=IsOpponentReady}" Value="False">
+                            <DataTrigger Binding="{Binding Source={x:Static local:Battle.Info}, Path=IsOpponentReady}" Value="False">
                                 <Setter Property="Content" Value="Wait..."></Setter>
                                 <Setter Property="Foreground" Value="Gray"></Setter>
                             </DataTrigger>
@@ -147,13 +147,13 @@
                 <Image.Resources>
                     <Style TargetType="{x:Type Image}">
                         <Style.Triggers>
-                            <DataTrigger Binding="{Binding Source={x:Static local:Game.Info}, Path=IsMyTurn}" Value="True">
+                            <DataTrigger Binding="{Binding Source={x:Static local:Battle.Info}, Path=IsMyTurn}" Value="True">
                                 <Setter Property="Source" Value="/Images/Rocket.png" ></Setter>
                             </DataTrigger>
-                            <DataTrigger Binding="{Binding Source={x:Static local:Game.Info}, Path=IsMyTurn}" Value="False">
+                            <DataTrigger Binding="{Binding Source={x:Static local:Battle.Info}, Path=IsMyTurn}" Value="False">
                                 <Setter Property="Source" Value="/Images/Shield.png" ></Setter>
                             </DataTrigger>
-                            <DataTrigger  Binding="{Binding Source={x:Static local:Game.Info}, Path=IsOpponentReady}" Value="False">
+                            <DataTrigger  Binding="{Binding Source={x:Static local:Battle.Info}, Path=IsOpponentReady}" Value="False">
                                 <Setter Property="Source" Value="/Images/SandTimer.png" ></Setter>
                             </DataTrigger>
                         </Style.Triggers>

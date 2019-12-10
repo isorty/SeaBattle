@@ -56,6 +56,7 @@
                     <Image Source="/Images/Controls/Exit.png"/>
                 </Button>
             </StackPanel>
+            <Button x:Name="BackMusic" Content="Звук" Canvas.Left="26" Canvas.Top="16" Width="50" Height="48" Click="BackMusic_Click"/>
         </Canvas>
     </Window.Content>
 

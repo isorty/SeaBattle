@@ -1,5 +1,5 @@
 ﻿using System;
-using Battleships.Core;
+using Battleships.Model;
 
 namespace Battleships.Extensions
 {

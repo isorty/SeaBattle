@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using Battleships.Core;
+using Battleships.Model;
 using Battleships.Pages;
 
 namespace Battleships.Extensions
@@ -49,7 +49,7 @@ namespace Battleships.Extensions
                     }
                 case PageType.Fight:
                     {
-                        mainWindowFrame.Content = new Fight((MyField)Parameters);
+                        mainWindowFrame.Content = new Fight((PlayerField)Parameters);
                         break;
                     }
                 case PageType.FightResult:

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using Battleships.Core;
+using Battleships.Model;
 using Battleships.Extensions;
 
 namespace Battleships.Pages
@@ -32,7 +32,7 @@ namespace Battleships.Pages
         {
             try
             {
-                if (await Game.ConnectionManager.StartServer(IPAddress.Parse(ServerIpAdress.Text),ServerPort.Text))
+                if (await Battle.ServerManager.StartServer(IPAddress.Parse(ServerIpAdress.Text),ServerPort.Text))
                     ConnectionLog.AppendText("Server started! Waiting for users...", Brushes.Green);
 
                 CreateServerButton.IsEnabled = false;
@@ -40,10 +40,10 @@ namespace Battleships.Pages
 
                 await WaitForOpponent();
 
-                Game.Info.IsHost = true;
-                Game.Info.IsMyTurn = true;
+                Battle.Info.IsHost = true;
+                Battle.Info.IsMyTurn = true;
 
-                Game.ConnectionManager.RunRecive();
+                Battle.ServerManager.RunRecive();
 
                 ContinueButton.IsEnabled = true;
             }
@@ -60,10 +60,10 @@ namespace Battleships.Pages
         {
             try
             {
-                await Game.ConnectionManager.WaitServerForUsers();
+                await Battle.ServerManager.WaitServerForUsers();
                 ConnectionLog.AppendText($"User connected!\n" +
-                                             $"Local end point : {Game.ConnectionManager.Client.LocalEndPoint}\n" +
-                                             $"Remote end point: {Game.ConnectionManager.Listener.RemoteEndPoint}", Brushes.Green);
+                                             $"Local end point : {Battle.ServerManager.Client.LocalEndPoint}\n" +
+                                             $"Remote end point: {Battle.ServerManager.Listener.RemoteEndPoint}", Brushes.Green);
                 ConnectionLog.ScrollToEnd();
             }
             catch (Exception ex)
@@ -78,16 +78,16 @@ namespace Battleships.Pages
         {
             try
             {
-                await Game.ConnectionManager.ConnectTo(IPAddress.Parse(ConnectIpAdress.Text), Convert.ToInt32(ConnectionPort.Text));
+                await Battle.ServerManager.ConnectTo(IPAddress.Parse(ConnectIpAdress.Text), Convert.ToInt32(ConnectionPort.Text));
 
                 ConnectionLog.AppendText($"Connected!\n" +
-                                         $"Local end point : {Game.ConnectionManager.Client.LocalEndPoint}\n" +
-                                         $"Remote end point: {Game.ConnectionManager.Listener.RemoteEndPoint}", Brushes.Green);
+                                         $"Local end point : {Battle.ServerManager.Client.LocalEndPoint}\n" +
+                                         $"Remote end point: {Battle.ServerManager.Listener.RemoteEndPoint}", Brushes.Green);
 
-                Game.Info.IsHost = false;
-                Game.Info.IsMyTurn = false;
+                Battle.Info.IsHost = false;
+                Battle.Info.IsMyTurn = false;
 
-                Game.ConnectionManager.RunRecive();
+                Battle.ServerManager.RunRecive();
 
                 CreateServerButton.IsEnabled = false;
                 ConnectButton.IsEnabled = false;
@@ -110,7 +110,7 @@ namespace Battleships.Pages
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            Game.ConnectionManager.CloseAllConnections();
+            Battle.ServerManager.CloseAllConnections();
             PageHelper.GoToPage(PageType.MainMenu);
         }
 
