@@ -79,8 +79,8 @@
     <Compile Include="Model\Player.cs" />
     <Compile Include="Model\Enemy\OnlineEnemy.cs" />
     <Compile Include="Model\Enemy\Enemy.cs" />
-    <Compile Include="Help classes\Extensions.cs" />
-    <Compile Include="Help classes\MessageFormtatter.cs" />
+    <Compile Include="Model\Extensions\Extensions.cs" />
+    <Compile Include="Model\Extensions\MessageFormtatter.cs" />
     <Compile Include="Model\Cell\ICell.cs" />
     <Compile Include="Model\Field\IField.cs" />
     <Compile Include="Model\Ship\IShip.cs" />
@@ -100,7 +100,7 @@
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Help classes\PageHelper.cs" />
+    <Compile Include="Model\Extensions\PageHelper.cs" />
     <Compile Include="Pages\SetUp.xaml.cs">
       <DependentUpon>SetUp.xaml</DependentUpon>
     </Compile>
