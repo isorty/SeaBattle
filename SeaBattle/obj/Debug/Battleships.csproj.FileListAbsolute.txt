@@ -142,3 +142,4 @@ D:\GitRepo\BattleShip\SeaBattle\obj\Debug\TestPages.Properties.Resources.resourc
 D:\GitRepo\BattleShip\SeaBattle\obj\Debug\Battleships.csproj.GenerateResource.Cache
 D:\GitRepo\BattleShip\SeaBattle\obj\Debug\TestPages.exe
 D:\GitRepo\BattleShip\SeaBattle\obj\Debug\TestPages.pdb
+D:\GitRepo\BattleShip\SeaBattle\obj\Debug\Battleships.csprojResolveAssemblyReference.cache

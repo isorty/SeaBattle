@@ -85,6 +85,9 @@
     <Compile Include="Model\Field\IField.cs" />
     <Compile Include="Model\Ship\IShip.cs" />
     <Compile Include="Model\Ship\ShipModel.cs" />
+    <Compile Include="Pages\SelectOfflineEnemy.xaml.cs">
+      <DependentUpon>SelectOfflineEnemy.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Notification.xaml.cs">
       <DependentUpon>Notification.xaml</DependentUpon>
     </Compile>
@@ -105,6 +108,10 @@
       <DependentUpon>SetUp.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Ship\ShipVisual.cs" />
+    <Page Include="Pages\SelectOfflineEnemy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Notification.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -1,0 +1,107 @@
+﻿<Page x:Class="TestPages.Pages.SelectOfflineEnemy"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestPages.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="705"
+      Title="SelectOfflineEnemy">
+
+    <Grid>
+
+        <Image 
+            HorizontalAlignment="Left"
+            Height="43"
+            Margin="161,0,0,0" 
+            VerticalAlignment="Top"
+            Width="47"
+            Source="/Images/PageHeaders/Planning.png"/>
+
+        <Label 
+            FontFamily="{DynamicResource Mf Sippin On Sunshine}"
+            Foreground="Gray"
+            FontSize="35"
+            Content="Выберите сложность" 
+            HorizontalAlignment="Center"
+             
+            VerticalAlignment="Top"
+            Height="63" 
+            Width="350" Margin="213,-6,142,0"/>
+
+        <StackPanel
+            Margin="230,0,231,-46"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Center"
+            Orientation="Vertical" Height="484">
+
+            <!-- Play vs Human button -->
+            <Button
+            Style="{DynamicResource StandartButtonStyle}"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="245" Height="150" 
+            Click="PlayVsHuman_Click">
+                <Button.Content>
+                    <StackPanel>
+                        <Image 
+                            Source="/Images/Menu/PlayButton.png" 
+                            Height="110"
+                            Width="234"/>
+                        <Label 
+                            HorizontalAlignment="Center"
+                            Foreground="DarkSlateBlue"
+                            FontSize="21"
+                            Content="Лёгкий" Width="78"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+            <!-- Play vs AI button -->
+            <Button
+            Style="{DynamicResource StandartButtonStyle}"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="244" Height="133" 
+            Click="PlayVsAI_Click">
+                <Button.Content>
+                    <StackPanel Width="234" Height="147">
+                        <Image 
+                            Source="/Images/AI.png" 
+                            Height="96"
+                            Width="100" Margin="67,0"/>
+                        <Label 
+                            HorizontalAlignment="Center"
+                            FontSize="21"
+                            Foreground="DarkSlateBlue"
+                            Content="Средний" Width="167" Margin="67,0,0,0"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+            <Button 
+                Style="{DynamicResource StandartButtonStyle}"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top" 
+                 Click="Exit_Click"
+                 Width="242"
+                 Height="157">
+                <Button.Content>
+                    <StackPanel>
+                        <Image 
+                            Source="/Images/Menu/Exit.ico" 
+                            Height="82"
+                            Width="153"/>
+                        <Label 
+                            HorizontalAlignment="Center"
+                            FontSize="21"
+                            Foreground="Red"
+                            Content="Сложный"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+        </StackPanel>
+
+    </Grid>
+</Page>
